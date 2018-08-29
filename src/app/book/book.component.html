@@ -1,0 +1,23 @@
+
+<div class="container">
+    Search 
+<input [(ngModel)]="query">
+<br>
+<br>
+<div class="row">
+  <div class="col-md-3">Name</div>
+  <div class="col-md-3">Genre</div>
+  <div class="col-md-3">Author</div>
+  <div class="col-md-3">Rating</div>
+</div>
+  <br>
+  
+  <div class="row" *ngFor="let item of values | search:'id,name,rating,genre':query">
+    <div class="col-md-3">{{item.name}}</div>
+    <div class="col-md-3">{{item.genre}}</div>
+    <div class="col-md-3">{{item.author}}</div>
+    <div class="col-md-3">{{item.rating}}</div>
+  </div>
+
+
+</div>
